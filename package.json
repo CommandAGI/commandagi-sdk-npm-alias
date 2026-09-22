@@ -1,0 +1,33 @@
+{
+  "name": "commandagi",
+  "version": "0.1.0",
+  "description": "CommandAGI — alias for @commandagi/sdk. Launch cloud computers and 3D robot simulations and control them from code.",
+  "keywords": [
+    "commandagi",
+    "agents",
+    "robotics",
+    "simulation"
+  ],
+  "license": "MIT",
+  "homepage": "https://commandagi.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CommandAGI/commandagi.git"
+  },
+  "type": "module",
+  "main": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "default": "./src/index.js"
+    }
+  },
+  "files": [
+    "src",
+    "README.md"
+  ],
+  "dependencies": {
+    "@commandagi/sdk": ">=0.1.1"
+  }
+}
