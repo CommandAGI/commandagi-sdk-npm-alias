@@ -1,13 +1,13 @@
-# `namespace/` — package names we hold so nobody else can
+# The unscoped `commandagi` npm alias
 
-Every directory here exists to **occupy a name on a public registry**. None of them is a product, and
-none of them may ever contain an implementation.
+This repository publishes the unscoped `commandagi` npm alias for `@commandagi/sdk`.
+It forwards to the canonical SDK and must not contain a second client implementation.
 
-## Why they are not in `packages/`
+## Why an unscoped alias exists
 
-[`docs/ops/REPO_LAYOUT.md`](../../docs/ops/REPO_LAYOUT.md) binds `packages/<name>` to the npm name
-`@commandagi/<name>`. These deliberately break that: their whole purpose is to hold a name that is
-**not** under our scope, because an unscoped name is the one an attacker can take.
+The implementation is published as `@commandagi/sdk`. This alias makes
+`npm install commandagi` resolve to that same implementation, while keeping the canonical
+unscoped project name under CommandAGI ownership.
 
 `@commandagi/*` needs no defending — we own the scope, so nobody else can publish into it. The
 exposure is entirely in the flat namespaces:
